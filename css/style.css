@@ -1,0 +1,205 @@
+
+:root{
+  --bg: #F9FAFB;
+  --surface: #FFFFFF;
+  --muted: #64748B;
+  --text: #0F172A;
+  --card: #FFFFFF;
+  --accent: #EF4444;
+  --accent-2: #F59E0B;
+  --border: #E5E7EB;
+  --ring: #93C5FD;
+  --ctaFrom: #EF4444;
+  --ctaTo: #F59E0B;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;line-height:1.5}
+a{color:#2563EB;text-decoration:none}
+a:hover{text-decoration:underline}
+.container{width:min(1100px, 92vw);margin-inline:auto}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);box-shadow:0 6px 16px rgba(15,23,42,.05)}
+.topbar__inner{display:flex;align-items:center;gap:1rem;padding:.8rem 0}
+.brand{font-weight:800;color:#0B1220;letter-spacing:.2px}
+.topnav{margin-left:auto;display:flex;gap:.6rem;flex-wrap:wrap}
+.topnav a{padding:.45rem .7rem;border-radius:.7rem;border:1px solid transparent}
+.topnav a:hover{background:rgba(15,23,42,.04);border-color:var(--border);text-decoration:none}
+.footer{border-top:1px solid var(--border);margin-top:2rem;padding:1.2rem 0;color:var(--muted);font-size:.95rem;background:var(--surface)}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem}
+.card{grid-column:span 12;background:var(--card);border:1px solid var(--border);border-radius:18px;padding:1rem 1rem 1.2rem;box-shadow:0 10px 30px rgba(2,6,23,.06)}
+@media (min-width:700px){.card--third{grid-column:span 4}.card--half{grid-column:span 6}}
+.card h2{margin:.2rem 0 0.4rem;font-size:1.15rem}
+.card p{margin:.2rem 0 .8rem;color:var(--muted)}
+.actions{display:flex;gap:.6rem;flex-wrap:wrap}
+.btn{display:inline-block;padding:.65rem 1rem;border-radius:12px;border:1px solid var(--border);background:var(--surface);color:var(--text);font-weight:600;transition:transform .08s ease, box-shadow .15s ease, filter .2s ease, background .2s ease;box-shadow:0 2px 0 rgba(2,6,23,.06)}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(2,6,23,.12);text-decoration:none}
+.btn:active{transform:translateY(0);filter:saturate(0.95)}
+.btn--primary{background:linear-gradient(135deg, var(--ctaFrom), var(--ctaTo));border:none;color:white;box-shadow:0 8px 20px rgba(239,68,68,.25), 0 1px 0 rgba(2,6,23,.06) inset}
+.btn--primary:hover{box-shadow:0 12px 26px rgba(239,68,68,.30), 0 1px 0 rgba(2,6,23,.06) inset;filter:brightness(1.02)}
+.btn--ghost{background:transparent;border:1px solid var(--border);color:#0F172A}
+.btn:focus{outline:3px solid var(--ring);outline-offset:2px;border-radius:12px}
+.badge{display:inline-flex;align-items:center;gap:.3rem;padding:.25rem .55rem;background:#FFF7ED;border:1px solid #FED7AA;border-radius:999px;font-size:.78rem;color:#9A3412}
+.kpis{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:1rem}
+.kpi{background:#FFF7ED;border:1px solid #FED7AA;padding:.55rem .8rem;border-radius:12px;font-size:.9rem;color:#9A3412}
+.table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--border);border-radius:14px;overflow:hidden;font-size:.95rem;background:var(--surface)}
+.table th,.table td{padding:.85rem .95rem;border-bottom:1px solid var(--border);vertical-align:top}
+.table th{background:#F8FAFC;color:#0F172A;text-align:left}
+.table tr:last-child td{border-bottom:none}
+.table img{width:96px;height:64px;object-fit:cover;border-radius:10px;border:1px solid var(--border)}
+.form{display:grid;gap:1rem;max-width:720px}
+.form .row{display:grid;gap:.8rem}
+@media (min-width:700px){.form .row{grid-template-columns:repeat(2,1fr)}}
+.label{font-weight:700;font-size:.95rem}
+.input, .select, .textarea{width:100%;padding:.7rem .8rem;border-radius:12px;border:1px solid var(--border);background:#FFFFFF;color:var(--text);box-shadow:0 1px 0 rgba(2,6,23,.03) inset}
+.textarea{min-height:110px;resize:vertical}
+.helper{color:var(--muted);font-size:.85rem;margin-top:.2rem}
+.form .actions{margin-top:.3rem}
+.breadcrumbs{margin:1rem 0;color:var(--muted);font-size:.92rem}
+.breadcrumbs a{color:#6B7280}
+.hero{display:flex;flex-direction:column;gap:.8rem;margin:1.2rem 0 1.4rem}
+.hero h1{font-size:1.7rem;margin:0}
+.hero p{margin:0;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem}
+.tile{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 8px 24px rgba(2,6,23,.04)}
+.tile .media{aspect-ratio:3/2;background:#F8FAFC;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:center}
+.tile .body{padding:.75rem .85rem}
+.tile h3{margin:.2rem 0 .2rem;font-size:1rem}
+.tile p{margin:0;color:var(--muted);font-size:.92rem}
+
+/* Quick List grid */
+.list-card{padding:0}
+.list-card header{padding:1rem 1rem .5rem;border-bottom:1px solid var(--border)}
+.list-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.6rem;padding:1rem}
+.list-grid li{list-style:none;margin:0}
+.list-grid a,.list-grid span{
+  display:block;background:var(--surface);border:1px solid var(--border);
+  border-radius:12px;padding:.55rem .7rem;box-shadow:0 2px 0 rgba(2,6,23,.04);
+}
+.list-grid a:hover{text-decoration:none;box-shadow:0 6px 14px rgba(2,6,23,.10)}
+
+/* Choice list rows for selectable items */
+.choice-list{list-style:none;margin:0;padding:0}
+.choice-list li{
+  display:flex;align-items:center;gap:1rem;
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:0.9rem 1rem;margin-bottom:0.7rem;
+  box-shadow:0 4px 10px rgba(2,6,23,.05);
+}
+.choice-list li .info{flex:1;min-width:0}
+.choice-list li h3{margin:.1rem 0;font-size:1.05rem}
+.choice-list li p{margin:0;color:var(--muted);font-size:.92rem}
+.choice-list .actions{display:flex;gap:.5rem;flex-wrap:wrap}
+@media (max-width:560px){
+  .choice-list li{flex-direction:column;align-items:flex-start}
+  .choice-list .actions{width:100%}
+}
+
+/* Choice list with thumbnails */
+.choice-list{list-style:none;margin:0;padding:0}
+.choice-list li{
+  display:flex;align-items:center;gap:1rem;
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:0.9rem 1rem;margin-bottom:0.7rem;
+  box-shadow:0 4px 10px rgba(2,6,23,.05);
+}
+.choice-list .thumb{
+  width:64px;height:64px;border-radius:12px;overflow:hidden;
+  border:1px solid var(--border);flex:0 0 64px;background:#F8FAFC;
+  display:flex;align-items:center;justify-content:center;
+}
+.choice-list .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.choice-list .info{flex:1;min-width:0}
+.choice-list h3{margin:.1rem 0;font-size:1.05rem}
+.choice-list p{margin:0;color:var(--muted);font-size:.92rem}
+.choice-list .actions{display:flex;gap:.5rem;flex-wrap:wrap}
+@media (max-width:560px){
+  .choice-list li{flex-direction:column;align-items:flex-start}
+  .choice-list .actions{width:100%}
+}
+
+/* Wider container for better desktop flow */
+.container{width:min(1200px, 94vw);}
+
+/* Dashboard grid helpers */
+.grid{grid-template-columns:repeat(12, minmax(0,1fr));}
+.grid--dashboard .card--full{grid-column:1 / -1}
+@media (min-width:900px){
+  .grid--dashboard .card--half{grid-column:span 6}
+  .grid--dashboard .card--third{grid-column:span 4}
+}
+
+/* Sleeker quick list spacing */
+.list-card{padding:0}
+.list-card header{padding:1rem 1rem .5rem;border-bottom:1px solid var(--border)}
+.list-grid{gap:.8rem;padding:1rem}
+
+/* Full-bleed helper: make a card span to the true viewport edges */
+.card--bleed{
+  grid-column: 1 / -1;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+}
+
+/* Align card heading borders across dashboard (match Users card look/feel) */
+.card:not(.list-card) h2{
+  border-bottom: 1px solid var(--border);
+  padding-bottom: .55rem;
+  margin-bottom: .7rem;
+}
+
+/* Vertical rhythm between dashboard rows */
+.section-gap{margin-top:1.2rem}
+@media (min-width:900px){ .section-gap{margin-top:1.4rem} }
+
+/* Prevent quick-list buttons from overflowing onto the background */
+.list-grid a, .list-grid span{
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;              /* allow proper shrinking in grid cells */
+  overflow: hidden;          /* clip any overflow */
+  text-overflow: ellipsis;   /* show … if too long */
+  white-space: nowrap;       /* keep single-line pill look */
+}
+
+
+/* ---- Quick Restaurant List overflow fix ---- */
+.list-card{overflow:hidden}
+.list-card .list-grid{grid-template-columns: 1fr; max-width:100%}
+.list-card .list-grid li{width:100%}
+.list-card .list-grid a, .list-card .list-grid span{
+  display:block;
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+@media (max-width:520px){
+  /* On very small screens, allow wrapping instead of clipping */
+  .list-card .list-grid a, .list-card .list-grid span{
+    white-space:normal;
+    overflow-wrap:anywhere;
+    text-overflow:clip;
+  }
+}
+
+
+/* Position helper: start at column 7 (right half) on desktop */
+@media (min-width:900px){
+  .grid--dashboard .start-7{ grid-column: 7 / span 6; }
+}
+
+/* Stretch cards to grid track */
+.grid--dashboard > .card{width:100%}
+
+/* Emphasis for primary actions */
+.card--emphasis{
+  box-shadow:0 14px 34px rgba(239,68,68,.08), 0 2px 0 rgba(2,6,23,.06);
+  border-color: #FED7AA; /* warm hint */
+}
+.card--emphasis h2{letter-spacing:.2px}
