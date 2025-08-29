@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orders • Admin Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="index.html">WeDev • Admin</a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="index.html">Dashboard</a>
+      <a href="list_fooditems.html">Food Items</a>
+      <a href="list_cuisines.html">Cuisines</a>
+      <a href="list_categories.html">Categories</a>
+      <a href="list_restaurants.html">Restaurants</a>
+      <a href="orders.html">Orders</a>
+      <a href="users.html">Users</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<nav class="breadcrumbs"><a href="index.html">Dashboard</a> › Orders</nav>
+<section class="hero">
+  <h1>Orders</h1>
+  <p>List of recent orders (sample data).</p>
+</section>
+
+<div class="card">
+  <table class="table" role="table">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Date & Time</th>
+        <th>User</th>
+        <th>Restaurant</th>
+        <th>Items</th>
+        <th>Total</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>#ORD-10234</td>
+        <td>2025-08-28 12:41</td>
+        <td>Maya Patel</td>
+        <td>Domino’s</td>
+        <td>Margherita Pizza ×1, Iced Latte ×2</td>
+        <td>$21.49</td>
+        <td><span class="badge">Preparing</span></td>
+        <td><a class="btn btn--ghost" href="#">View</a></td>
+      </tr>
+      <tr>
+        <td>#ORD-10233</td>
+        <td>2025-08-28 12:17</td>
+        <td>Jordan Lee</td>
+        <td>Subway</td>
+        <td>Veggie Sub ×1, Iced Tea ×1</td>
+        <td>$12.10</td>
+        <td><span class="badge">Out for delivery</span></td>
+        <td><a class="btn btn--ghost" href="#">View</a></td>
+      </tr>
+      <tr>
+        <td>#ORD-10232</td>
+        <td>2025-08-28 11:59</td>
+        <td>Alex Johnson</td>
+        <td>KFC</td>
+        <td>Bucket Meal ×1</td>
+        <td>$18.75</td>
+        <td><span class="badge">Delivered</span></td>
+        <td><a class="btn btn--ghost" href="#">View</a></td>
+      </tr>
+      <tr>
+        <td>#ORD-10231</td>
+        <td>2025-08-28 11:32</td>
+        <td>Sofia Gomez</td>
+        <td>Olive Garden</td>
+        <td>Penne Alfredo ×1, Garlic Bread ×1</td>
+        <td>$16.90</td>
+        <td><span class="badge">Cancelled</span></td>
+        <td><a class="btn btn--ghost" href="#">View</a></td>
+      </tr>
+      <tr>
+        <td>#ORD-10230</td>
+        <td>2025-08-28 10:58</td>
+        <td>Chris Park</td>
+        <td>Local Bistro</td>
+        <td>Caesar Salad ×2</td>
+        <td>$14.20</td>
+        <td><span class="badge">Preparing</span></td>
+        <td><a class="btn btn--ghost" href="#">View</a></td>
+      </tr>
+      <tr>
+        <td>#ORD-10229</td>
+        <td>2025-08-28 10:21</td>
+        <td>Priya Singh</td>
+        <td>Chipotle</td>
+        <td>Chicken Bowl ×1, Chips & Salsa ×1</td>
+        <td>$13.45</td>
+        <td><span class="badge">Delivered</span></td>
+        <td><a class="btn btn--ghost" href="#">View</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>© WeDev Technologies • Food Ordering Admin • Static UI Mock</p>
+  </div>
+</footer>
+</body>
+</html>

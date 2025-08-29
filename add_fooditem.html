@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add Food Item • Admin Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="index.html">WeDev • Admin</a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="index.html">Dashboard</a>
+      <a href="list_fooditems.html">Food Items</a>
+      <a href="list_cuisines.html">Cuisines</a>
+      <a href="list_categories.html">Categories</a>
+      <a href="list_restaurants.html">Restaurants</a>
+      <a href="orders.html">Orders</a>
+      <a href="users.html">Users</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<nav class="breadcrumbs"><a href="index.html">Dashboard</a> › Add Food Item</nav>
+<section class="grid">
+  <article class="card">
+    <h2>Add Food Item</h2>
+    <p class="helper">Create a new menu item (static mock form).</p>
+    <form class="form" action="#" method="post">
+      <div class="row">
+        <div>
+          <label class="label" for="fi-name">Item Name</label>
+          <input class="input" id="fi-name" name="name" type="text" placeholder="e.g., Margherita Pizza" required />
+        </div>
+        <div>
+          <label class="label" for="fi-price">Price (USD)</label>
+          <input class="input" id="fi-price" name="price" type="number" min="0" step="0.01" placeholder="12.99" required />
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label class="label" for="fi-cuisine">Cuisine</label>
+          <select class="select" id="fi-cuisine" name="cuisine" required>
+            <option value="">Select cuisine</option>
+            <option>Italian</option><option>American</option><option>Indian</option><option>Chinese</option><option>Mexican</option><option>Mediterranean</option>
+          </select>
+        </div>
+        <div>
+          <label class="label" for="fi-category">Category</label>
+          <select class="select" id="fi-category" name="category" required>
+            <option value="">Select category</option>
+            <option>Vegetarian</option><option>Non-Vegetarian</option><option>Beverages</option><option>Desserts</option><option>Healthy</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div>
+          <label class="label" for="fi-restaurant">Restaurant</label>
+          <select class="select" id="fi-restaurant" name="restaurant">
+            <option value="">Select restaurant</option>
+            <option>Domino’s</option><option>Subway</option><option>KFC</option><option>Olive Garden</option><option>Chipotle</option><option>Local Bistro</option>
+          </select>
+        </div>
+        <div>
+          <label class="label" for="fi-available">Availability</label>
+          <select class="select" id="fi-available" name="availability">
+            <option>Available</option>
+            <option>Out of Stock</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label class="label" for="fi-img">Image URL</label>
+        <input class="input" id="fi-img" name="image" type="url" placeholder="https://example.com/margherita.jpg" />
+      </div>
+      <div>
+        <label class="label" for="fi-desc">Description</label>
+        <textarea class="textarea" id="fi-desc" name="description" placeholder="Short description…"></textarea>
+      </div>
+      <div class="actions">
+        <button class="btn btn--primary" type="submit">Save Food Item</button>
+        <a class="btn btn--ghost" href="index.html">Cancel</a>
+      </div>
+    </form>
+  </article>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>© WeDev Technologies • Food Ordering Admin • Static UI Mock</p>
+  </div>
+</footer>
+</body>
+</html>

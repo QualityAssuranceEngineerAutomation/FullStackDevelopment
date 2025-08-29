@@ -1,49 +1,129 @@
-﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard • Admin Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Restaurant Name</th>
-                <th>Location</th>
-                <th>Cuisine</th>
-                <th></th> <!-- CTA column -->
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>La Bella Italia</td>
-                <td>New York, NY</td>
-                <td>Italian</td>
-                <td><button class="button">Select</button></td>
-            </tr>
-            <tr>
-                <td>Sushi World</td>
-                <td>San Francisco, CA</td>
-                <td>Japanese</td>
-                <td><button class="button">Select</button></td>
-            </tr>
-            <tr>
-                <td>Spice Symphony</td>
-                <td>Houston, TX</td>
-                <td>Indian</td>
-                <td><button class="button">Select</button></td>
-            </tr>
-            <tr>
-                <td>Le Gourmet</td>
-                <td>Chicago, IL</td>
-                <td>French</td>
-                <td><button class="button">Select</button></td>
-            </tr>
-        </tbody>
-    </table>
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="index.html">WeDev • Admin</a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="index.html">Dashboard</a>
+      <a href="list_fooditems.html">Food Items</a>
+      <a href="list_cuisines.html">Cuisines</a>
+      <a href="list_categories.html">Categories</a>
+      <a href="list_restaurants.html">Restaurants</a>
+      <a href="orders.html">Orders</a>
+      <a href="users.html">Users</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<section class="hero">
+  <h1>Admin Dashboard</h1>
+  <p>Manage food items, cuisines, categories, restaurants, orders, and users. These static pages are UI mocks with sample data.</p>
+  <div class="kpis">
+    <span class="kpi">Food Items: 12</span>
+    <span class="kpi">Cuisines: 6</span>
+    <span class="kpi">Categories: 5</span>
+    <span class="kpi">Restaurants: 8</span>
+    <span class="kpi">Orders (today): 27</span>
+    <span class="kpi">Users: 3,245</span>
+  </div>
+</section>
 
 
+<section class="grid grid--dashboard">
+  <!-- Row 1: Catalog first -->
+  <article class="card card--half card--emphasis">
+    <span class="badge">Food Items</span>
+    <h2>Create & view Food Items</h2>
+    <p>Pizza, Burgers, Pasta, Salads, Desserts, and more.</p>
+    <div class="actions">
+      <a class="btn btn--primary" href="add_fooditem.html">Add Food Item</a>
+      <a class="btn" href="list_fooditems.html">View Food Items</a>
+    </div>
+  </article>
+
+  <article class="card card--half">
+    <span class="badge">Restaurants</span>
+    <h2>Manage Restaurants</h2>
+    <p>Domino’s, Subway, KFC, and local favorites.</p>
+    <div class="actions">
+      <a class="btn btn--primary" href="add_restaurant.html">Add Restaurant</a>
+      <a class="btn" href="list_restaurants.html">View Restaurants</a>
+    </div>
+  </article>
+
+  <!-- Row 2: Buying momentum / monitoring -->
+  <article class="card card--half card--emphasis">
+    <span class="badge">Orders</span>
+    <h2>Orders</h2>
+    <p>Monitor and manage the latest orders placed by users.</p>
+    <div class="actions">
+      <a class="btn" href="orders.html">View Orders</a>
+    </div>
+  </article>
+
+  <article class="card list-card card--half">
+    <header>
+      <span class="badge">Restaurants</span>
+      <h2 style="margin:.4rem 0 .2rem">Quick Restaurant List</h2>
+      <p class="helper">Frequently managed restaurants at a glance.</p>
+    </header>
+    <ul class="list-grid" role="list">
+      <li><a href="list_restaurants.html#dominos">Domino’s</a></li>
+      <li><a href="list_restaurants.html#subway">Subway</a></li>
+      <li><a href="list_restaurants.html#kfc">KFC</a></li>
+      <li><a href="list_restaurants.html#olive-garden">Olive Garden</a></li>
+      <li><a href="list_restaurants.html#chipotle">Chipotle</a></li>
+      <li><a href="list_restaurants.html#local-bistro">Local Bistro</a></li>
+      <li><a href="list_restaurants.html#panda-express">Panda Express</a></li>
+      <li><a href="list_restaurants.html#shake-shack">Shake Shack</a></li>
+      <li><a href="list_restaurants.html#five-guys">Five Guys</a></li>
+      <li><a href="list_restaurants.html#starbucks">Starbucks</a></li>
+    </ul>
+  </article>
+
+  <!-- Row 3: Taxonomy + users -->
+  <article class="card card--third">
+    <span class="badge">Categories</span>
+    <h2>Manage Categories</h2>
+    <p>Vegetarian, Non-Vegetarian, Beverages, Desserts…</p>
+    <div class="actions">
+      <a class="btn btn--primary" href="add_category.html">Add Category</a>
+      <a class="btn" href="list_categories.html">View Categories</a>
+    </div>
+  </article>
+
+  <article class="card card--third">
+    <span class="badge">Cuisines</span>
+    <h2>Manage Cuisines</h2>
+    <p>Italian, American, Indian, Chinese, Mexican…</p>
+    <div class="actions">
+      <a class="btn btn--primary" href="add_cuisine.html">Add Cuisine</a>
+      <a class="btn" href="list_cuisines.html">View Cuisines</a>
+    </div>
+  </article>
+
+  <article class="card card--third">
+    <span class="badge">Users</span>
+    <h2>Registered Users</h2>
+    <p>Manage customer accounts and details.</p>
+    <div class="actions">
+      <a class="btn" href="users.html">View Users</a>
+    </div>
+  </article>
+</section>
+
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>© WeDev Technologies • Food Ordering Admin • Static UI Mock</p>
+  </div>
+</footer>
 </body>
 </html>

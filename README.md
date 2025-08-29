@@ -1,2 +1,14 @@
-# FullStackDevelopment
-This repo will hold all of my work that was completed while I in pursuit of a Full Stack Development Cert from UT Austin.
+# Food Ordering Admin • Static UI (HTML/CSS)
+This is a static HTML/CSS mock for the WeDev Food Ordering Admin Dashboard (light theme).
+
+## Included pages
+- `index.html` — Admin Dashboard
+- Add pages: `add_cuisine.html`, `add_category.html`, `add_fooditem.html`, `add_restaurant.html`
+- List pages: `list_cuisines.html`, `list_categories.html`, `list_fooditems.html`, `list_restaurants.html`
+- Shared stylesheet: `css/styles.css`
+
+## External (link-only) pages
+- `orders.html` and `users.html` are **not** included here. Place the given files alongside `index.html`, or update the dashboard links accordingly.
+
+## Usage
+Open `index.html` in your browser. These pages are purely static (no JS) and contain sample data/placeholder images.

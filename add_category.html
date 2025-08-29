@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add Category • Admin Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="index.html">WeDev • Admin</a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="index.html">Dashboard</a>
+      <a href="list_fooditems.html">Food Items</a>
+      <a href="list_cuisines.html">Cuisines</a>
+      <a href="list_categories.html">Categories</a>
+      <a href="list_restaurants.html">Restaurants</a>
+      <a href="orders.html">Orders</a>
+      <a href="users.html">Users</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<nav class="breadcrumbs"><a href="index.html">Dashboard</a> › Add Category</nav>
+<section class="grid">
+  <article class="card">
+    <h2>Add Category</h2>
+    <p class="helper">Create a new category such as Vegetarian, Non-Vegetarian, Beverages, Desserts.</p>
+    <form class="form" action="#" method="post">
+      <div class="row">
+        <div>
+          <label class="label" for="cat-name">Category Name</label>
+          <input class="input" id="cat-name" name="name" type="text" placeholder="e.g., Desserts" required />
+        </div>
+        <div>
+          <label class="label" for="cat-type">Type</label>
+          <select class="select" id="cat-type" name="type">
+            <option value="">Select type</option>
+            <option>Vegetarian</option>
+            <option>Non-Vegetarian</option>
+            <option>Beverages</option>
+            <option>Desserts</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <label class="label" for="cat-img">Image URL</label>
+        <input class="input" id="cat-img" name="image" type="url" placeholder="https://example.com/desserts.jpg" />
+      </div>
+      <div>
+        <label class="label" for="cat-desc">Description</label>
+        <textarea class="textarea" id="cat-desc" name="description" placeholder="Short description…"></textarea>
+      </div>
+      <div class="actions">
+        <button class="btn btn--primary" type="submit">Save Category</button>
+        <a class="btn btn--ghost" href="index.html">Cancel</a>
+      </div>
+    </form>
+  </article>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>© WeDev Technologies • Food Ordering Admin • Static UI Mock</p>
+  </div>
+</footer>
+</body>
+</html>

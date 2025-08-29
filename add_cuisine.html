@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Add Cuisine • Admin Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a class="brand" href="index.html">WeDev • Admin</a>
+    <nav class="topnav" aria-label="Primary">
+      <a href="index.html">Dashboard</a>
+      <a href="list_fooditems.html">Food Items</a>
+      <a href="list_cuisines.html">Cuisines</a>
+      <a href="list_categories.html">Categories</a>
+      <a href="list_restaurants.html">Restaurants</a>
+      <a href="orders.html">Orders</a>
+      <a href="users.html">Users</a>
+    </nav>
+  </div>
+</header>
+<main class="container">
+<nav class="breadcrumbs"><a href="index.html">Dashboard</a> › Add Cuisine</nav>
+<section class="grid">
+  <article class="card">
+    <h2>Add Cuisine</h2>
+    <p class="helper">Use this form to create a new cuisine (static mock).</p>
+    <form class="form" action="#" method="post">
+      <div class="row">
+        <div>
+          <label class="label" for="cuisine-name">Cuisine Name</label>
+          <input class="input" id="cuisine-name" name="name" type="text" placeholder="e.g., Italian" required />
+        </div>
+        <div>
+          <label class="label" for="cuisine-origin">Region / Origin</label>
+          <input class="input" id="cuisine-origin" name="origin" type="text" placeholder="e.g., Italy" />
+        </div>
+      </div>
+      <div>
+        <label class="label" for="cuisine-img">Image URL</label>
+        <input class="input" id="cuisine-img" name="image" type="url" placeholder="https://example.com/italian.jpg" />
+        <p class="helper">Optional: used in list view thumbnails.</p>
+      </div>
+      <div>
+        <label class="label" for="cuisine-desc">Description</label>
+        <textarea class="textarea" id="cuisine-desc" name="description" placeholder="Short description…"></textarea>
+      </div>
+      <div class="actions">
+        <button class="btn btn--primary" type="submit">Save Cuisine</button>
+        <a class="btn btn--ghost" href="index.html">Cancel</a>
+      </div>
+    </form>
+  </article>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>© WeDev Technologies • Food Ordering Admin • Static UI Mock</p>
+  </div>
+</footer>
+</body>
+</html>
